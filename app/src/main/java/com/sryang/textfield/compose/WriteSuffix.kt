@@ -2,6 +2,7 @@ package com.sryang.textfield.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,18 +17,20 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun WriteSuffix(suffix: String, onValueChange: (String) -> Unit) {
-    Text(text = "suffix")
-    BasicTextField(value = suffix, onValueChange = onValueChange, decorationBox = {
-        Box(
-            modifier = Modifier
-                .height(25.dp)
-                .clip(RoundedCornerShape(8.dp))
-                .background(MaterialTheme.colorScheme.surfaceContainer),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(modifier = Modifier.padding(start = 8.dp, end = 8.dp)) {
-                it.invoke()
+    Column {
+        Text(text = "suffix")
+        BasicTextField(value = suffix, onValueChange = onValueChange, decorationBox = {
+            Box(
+                modifier = Modifier
+                    .height(25.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(MaterialTheme.colorScheme.surfaceContainer),
+                contentAlignment = Alignment.Center
+            ) {
+                Box(modifier = Modifier.padding(start = 8.dp, end = 8.dp)) {
+                    it.invoke()
+                }
             }
-        }
-    })
+        })
+    }
 }
