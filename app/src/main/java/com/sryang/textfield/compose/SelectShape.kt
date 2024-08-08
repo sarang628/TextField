@@ -24,7 +24,7 @@ fun SelectShape(
             // @formatter:off
             when(it){
                 "CircleShape" -> onChange.invoke(CircleShape)
-                "RoundedCornerShape" -> onChange.invoke(RoundedCornerShape(8.dp))
+                "RoundedCornerShape" -> onChange.invoke(RoundedCornerShape(200.dp))
                 "CutCornerShape" -> onChange.invoke(CutCornerShape(8.dp))
                 "RectangleShape" -> onChange.invoke(RectangleShape)
             }
