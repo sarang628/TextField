@@ -32,7 +32,7 @@ data class CustomTextFieldUiState(
     val prefix: String = "",
     val suffix: String = "",
     val value: String = "",
-    val placeholder: String = "Search YouTube",
+    val placeholder: String = "",
     val supportingText: String = "",
     val keyboardCapitalization: KeyboardCapitalization = KeyboardCapitalization.None,
     val keyboardType: KeyboardType = KeyboardType.Text,
@@ -52,24 +52,24 @@ data class CustomTextFieldUiState(
 )
 
 val CustomTextFieldUiState.content
-    get() = """${textFieldType}(
-    value = "${value}",
-    enabled = ${enabled},
-    modifier = Modifier.height(${height}.dp),
-    readOnly = ${readOnly},
-    label = ${label},
-    placeholder = { Text(text = "${placeholder}") },
-    leadingIcon = getLeadingIcon(leadingIcon),
-    trailingIcon = getTrailingIcon(trailingIcon),
-    prefix = { Text(text = "${prefix}") },
-    suffix = { Text(text = "${suffix}") },
-    supportingText = "${supportingText}",
-    isError = ${isError},
+    get() = """$textFieldType(
+    value = "$value",
+    enabled = $enabled,
+    modifier = Modifier.height($height.dp),
+    readOnly = $readOnly,
+    label = $label,
+    placeholder = { Text(text = "$placeholder") },
+    leadingIcon = {IconButton(onClick = {}) { Icon(imageVector = Icons.Default.Face, contentDescription = "") }},
+    trailingIcon = {IconButton(onClick = {}) { Icon(imageVector = Icons.Default.Face, contentDescription = "") }},
+    prefix = { Text(text = "$prefix") },
+    suffix = { Text(text = "$suffix") },
+    supportingText = "Text(text = "$supportingText")",
+    isError = $isError,
     keyboardOptions = KeyboardOptions(capitalization = keyboardCapitalization, keyboardType = keyboardType,),
-    singleLine = ${singleLine},
-    minLines = ${minLines},
-    maxLines = ${maxLines},
-    shape = ${shape}
+    singleLine = $singleLine,
+    minLines = $minLines,
+    maxLines = $maxLines,
+    shape = $shape
     )
                             """
 
