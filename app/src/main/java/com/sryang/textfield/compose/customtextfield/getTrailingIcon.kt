@@ -1,4 +1,4 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear

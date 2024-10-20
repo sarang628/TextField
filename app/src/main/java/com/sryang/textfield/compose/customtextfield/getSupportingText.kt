@@ -1,4 +1,4 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

@@ -1,4 +1,4 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -16,10 +16,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun WritePrefix(prefix: String, onValueChange: (String) -> Unit) {
+fun WriteValue(value: String, onValueChange: (String) -> Unit) {
     Column {
-        Text(text = "prefix")
-        BasicTextField(value = prefix, onValueChange = onValueChange, decorationBox = {
+        Text(text = "value")
+        BasicTextField(value = value, onValueChange = onValueChange, decorationBox = {
             Box(
                 modifier = Modifier
                     .height(25.dp)

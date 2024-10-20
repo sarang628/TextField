@@ -1,12 +1,12 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 
 @Composable
-fun SelectEanbled(onChange: (Boolean) -> Unit) {
+fun SelectReadOnly(onChange: (Boolean) -> Unit) {
     Column {
-        Chips(title = "enabled", "true", "false") {
+        Chips(title = "readOnly", "false", "true") {
             onChange.invoke(it == "true")
         }
     }

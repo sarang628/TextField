@@ -3,6 +3,9 @@ package com.sryang.textfield
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.sryang.textfield.compose.TextFieldCatalog
+import com.sryang.textfield.compose.TextFieldNavigation
+import com.sryang.textfield.compose.TextFieldWithDescription
 import com.sryang.textfield.compose.customtextfield.CustomTextField
 import com.sryang.textfield.ui.theme.KeyboardOptionsTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -14,7 +17,7 @@ class MainActivity : ComponentActivity() {
         //enableEdgeToEdge()
         setContent {
             KeyboardOptionsTheme {
-                CustomTextField()
+                TextFieldNavigation()
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SelectIsError(isError: Boolean, onCheckedChange: ((Boolean) -> Unit)?) {
+fun SelectTrailingIcon(trailingIcon: Boolean, onCheckedChange: ((Boolean) -> Unit)?) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(text = "isError")
+        Text(text = "trailingIcon")
         Spacer(modifier = Modifier.width(8.dp))
-        Switch(checked = isError, onCheckedChange = onCheckedChange)
+        Switch(checked = trailingIcon, onCheckedChange = onCheckedChange)
     }
 }

@@ -1,4 +1,4 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -16,10 +16,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun WriteSupportingText(supportingText: String, onValueChange: (String) -> Unit) {
+fun WriteLabel(label: String, onValueChange: (String) -> Unit) {
     Column {
-        Text(text = "supportingText")
-        BasicTextField(value = supportingText, onValueChange = onValueChange, decorationBox = {
+        Text(text = "label")
+        BasicTextField(value = label, onValueChange = onValueChange, decorationBox = {
             Box(
                 modifier = Modifier
                     .height(25.dp)

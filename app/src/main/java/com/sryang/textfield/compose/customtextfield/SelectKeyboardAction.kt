@@ -1,16 +1,16 @@
-package com.sryang.textfield.compose
+package com.sryang.textfield.compose.customtextfield
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.input.KeyboardType
 
 @Composable
-fun SelectKeyboardType(
+fun SelectKeyboardAction(
     onChange: (KeyboardType) -> Unit = {},
 ) {
     Column {
         Chips(
-            "KeyboardType",
+            "SelectKeyboardAction",
             KeyboardType.Text.toString(),
             KeyboardType.Ascii.toString(),
             KeyboardType.Number.toString(),
